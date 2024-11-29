@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's NoteBook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="demo.css">
+    <script src="demo.js"></script>
+</head>
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+
+    <!--Body Header navbar-->
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            
+            <!-- class 9th -->
+            <li>
+                <a>class 9th</a>
+                <ul class="dropdown">
+                    <li>
+                        <a>physics</a>
+                        <ul class="sub-dropdown">
+                            <a href="#chap_kinematics">kinematics</a>
+                            <a href="#chap_dynamics">dynamics</a>
+                            <a href="#chap_energy_and_power">energy and power</a>
+                            <a href="#chap_Gravitation">Gravitation</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">chemistry</a></li>
+                </ul>
+            </li>
+            <!-- class 10th -->
+            <li>
+                <a href="#">class 10th</a>
+                <ul class="dropdown">
+                    <li><a href="#">physics</a>
+                        <ul class="sub-dropdown">
+                           <a href="#chap_Electricity">Electricity</a> 
+                        </ul>
+                </li>
+                    <li><a href="#">chemistry</a></li>
+                </ul>
+            </li>
+            <!-- class 11th -->
+            <li>
+                <a href="#">class 11th</a>
+                <ul class="dropdown">
+                    <li><a href="#">physics</a>
+                        <ul class="sub-dropdown">
+                            <a href="#chap_Two_dimensional_Motion">Two dimensional motion</a>
+                            <a href="#chap_Sound_Oscillation_Waves">Sound Oscillation and Waves</a>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">chemistry</a></li>
+                </ul>
+            </li>
+            <!-- class 12th -->
+            <li>
+                <a href="#">class 12th</a>
+                <ul class="dropdown">
+                    <li><a href="#">physics</a>
+                        <ul class="sub-dropdown">
+                            <a href="#chap_Electostatics">Electrostatics</a>
+                            <a href="#chap_ModernPhysics">Modren Physics</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">chemistry</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Main Introduction Section -->
+    <div class="main_container" id="home">
+        <h1 class="heading1">Welcome to</h1>
+        <h1 class="heading2">Newton's NoteBook</h1>
+        <p class="heading_para">This helps you solve physics problems</p>
+    </div>
+
+    <!-- 9th Class Physics Section -->
+    <div class="ninth_physics">
+        <h1 class="class">Physics of Class 9th</h1>
+
+        <div class="chapter" id="chap_kinematics">
+            <h2 class="chap_name">Kinematics</h2>
+            <div class="card_container">
+
+                <!-- Final Velocity Card -->
+                <div class="card">
+                    <h1 class="card_heading">Final Velocity</h1>
+                    <p class="card_text">vf = vi + at</p>
+                    <input type="number" placeholder="Initial Velocity (vi)" class="input" id="vi_finalvelocity">
+                    <input type="number" placeholder="Acceleration (a)" class="input" id="a_finalvelocity">
+                    <input type="number" placeholder="Time (t)" class="input" id="t_finalvelocity">
+                    <button class="calculate" onclick="calcfinalvelocity()">Calculate</button>
+                    <div class="finding_quantity" id="finding_finalvelocity">Final Velocity is:</div>
+                </div>
+
+                <!-- Displacement Card -->
+                <div class="card">
+                    <h1 class="card_heading">Displacement</h3>
+                    <p class="card__text">s = vi * t + 0.5 * at²</p>
+                    <input type="number" placeholder="Initial Velocity (vi)" class="input" id="vi_displacement">
+                    <input type="number" placeholder="Acceleration (a)" class="input" id="a_displacement">
+                    <input type="number" placeholder="Time (t)" class="input" id="t_displacement">
+                    <button class="calculate" onclick="calcdisplacement()">Calculate</button>
+                    <div class="finding_quantity" id="finding_displacement">Displacement is:</div>
+                </div>
+
+                <!-- Acceleration Card -->
+                <div class="card">
+                    <h1 class="card_heading">Acceleration</h3>
+                    <p class="card__text">2as = vf² - vi²</p>
+                    <input type="number" placeholder="Final Velocity (vf)" class="input" id="vf_acceleration">
+                    <input type="number" placeholder="Initial Velocity (vi)" class="input" id="vi_acceleration">
+                    <input type="number" placeholder="Displacement (s)" class="input" id="s_acceleration">
+                    <button class="calculate" onclick="calcacceleration()">Calculate</button>
+                    <div class="finding_quantity" id="finding_acceleration">Acceleration is:</div>
+                </div>
+
+                <!-- Gravity_Finalvelocity Card -->
+                <div class="card">
+                    <h1 class="card_heading">Finalvelocity-gravity</h3>
+                    <p class="card__text">vf = vi + gt</p>
+                    <input type="number" placeholder="Initial Velocity (vi)" class="input" id="vi_gravity">
+                    <input type="number" placeholder="time" class="input" id="t_gravity">
+                    <button class="calculate" onclick="calcfinalvelocity_gravity()">Calculate</button>
+                    <div class="finding_quantity" id="finding_finalvelocity_gravity">Finalvelocity is:</div>
+                </div>
+
+                <!-- Gravity_Displacement Card -->
+                <div class="card">
+                    <h1 class="card_heading">Displacement_gravity</h3>
+                    <p class="card__text">2gh = vf² - vi² </p>
+                    <input type="number" placeholder="final Velocity (vf)" class="input" id="vf_gravity">
+                    <button class="calculate" onclick="calcheight_gravity()">Calculate</button>
+                    <div class="finding_quantity" id="finding_height_gravity">height is:</div>
+                </div>
+
+
+                <!-- Gravity_Time Card -->
+                <div class="card">
+                    <h1 class="card_heading">Time_gravity</h3>
+                    <p class="card__text"> h = vi*t + 0.5*g*t² </p>
+                    <input type="number" placeholder="Height (h)" class="input" id="h_gravity">
+                    <button class="calculate" onclick="calctime_gravity()">Calculate</button>
+                    <div class="finding_quantity" id="finding_time_gravity">time is:</div>
+                    <div class="finding_quantity" id="finding_total_time_gravity">Total time of flight is:</div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="chapter" id="chap_dynamics">
+            <h2 class="chap_name">Dynamics</h2>
+            <div class="card_container">
+
+                <!-- Force Card -->
+                <div class="card">
+                    <h1 class="card_heading">Force</h3>
+                    <p class="card__text">F = ma</p>
+                    <input type="number" placeholder="Mass (m)" class="input" id="m_force">
+                    <input type="number" placeholder="Acceleration (a)" class="input" id="a_force">
+                    <button class="calculate" onclick="calcforce()">Calculate</button>
+                    <div class="finding_quantity" id="finding_force">Force is:</div>
+                </div>
+
+                <!-- Mass Card -->
+                <div class="card">
+                    <h1 class="card_heading">Mass</h3>
+                    <p class="card__text">m = F / a</p>
+                    <input type="number" placeholder="Force (F)" class="input" id="f_mass">
+                    <input type="number" placeholder="Acceleration (a)" class="input" id="a_mass">
+                    <button class="calculate" onclick="calcmass()">Calculate</button>
+                    <div class="finding_quantity" id="finding_mass">Mass is:</div>
+                </div>
+
+                <!-- Acceleration from Force and Mass Card -->
+                <div class="card">
+                    <h1 class="card_heading">Acceleration</h3>
+                    <p class="card__text">a = F / m</p>
+                    <input type="number" placeholder="Force (F)" class="input" id="f_acceleration">
+                    <input type="number" placeholder="Mass (m)" class="input" id="m_acceleration">
+                    <button class="calculate" onclick="calcacceleration_force()">Calculate</button>
+                    <div class="finding_quantity" id="finding_acceleration_force">Acceleration is:</div>
+                </div>
+
+
+                <!-- Momentum Card -->
+                <div class="card">
+                    <h1 class="card_heading">Momentum</h3>
+                    <p class="card__text">p = mv</p>
+                    <input type="number" placeholder="mass (m)" class="input" id="m_momentum">
+                    <input type="number" placeholder="velocity (v)" class="input" id="v_momentum">
+                    <button class="calculate" onclick="calcmomentum()">Calculate</button>
+                    <div class="finding_quantity" id="finding_momentum">Momentum is:</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="chapter" id="chap_energy_and_power">
+            <h2 class="chap_name">Work, Power, and Energy</h2>
+            <div class="card_container">
+
+                <!-- Work Card -->
+                <div class="card">
+                    <h1 class="card_heading">Work</h3>
+                    <p class="card__text">W = F * d</p>
+                    <input type="number" placeholder="Force (F)" class="input" id="f_work">
+                    <input type="number" placeholder="Displacement (d)" class="input" id="d_work">
+                    <button class="calculate" onclick="calcwork()">Calculate</button>
+                    <div class="finding_quantity" id="finding_work">Work done is:</div>
+                </div>
+
+                <!-- Power Card -->
+                <div class="card">
+                    <h1 class="card_heading">Power</h3>
+                    <p class="card__text">P = W / t</p>
+                    <input type="number" placeholder="Work (W)" class="input" id="w_power">
+                    <input type="number" placeholder="Time (t)" class="input" id="t_power">
+                    <button class="calculate" onclick="calcpower()">Calculate</button>
+                    <div class="finding_quantity" id="finding_power">Power is:</div>
+                </div>
+
+                <!-- Kinetic Energy Card -->
+                <div class="card">
+                    <h1 class="card_heading">Kinetic Energy</h3>
+                    <p class="card__text">K.E = 0.5 * m * v²</p>
+                    <input type="number" placeholder="Mass (m)" class="input" id="m_energy">
+                    <input type="number" placeholder="Velocity (v)" class="input" id="v_energy">
+                    <button class="calculate" onclick="calcenergy()">Calculate</button>
+                    <div class="finding_quantity" id="finding_energy">Kinetic Energy is:</div>
+                </div>
+
+                <!-- Potential Energy Card -->
+                <div class="card">
+                    <h1 class="card_heading">Potential Energy</h3>
+                    <p class="card__text">P.E = mgh</p>
+                    <input type="number" placeholder="Mass (m)" class="input" id="m_p_energy">
+                    <input type="number" placeholder="height (h)" class="input" id="h_p_energy">
+                    <button class="calculate" onclick="calc_p_energy()">Calculate</button>
+                    <div class="finding_quantity" id="finding_p_energy">Potential Energy is:</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+        <div class="chapter" id="chap_Gravitation">
+            <h2 class="chap_name">Gravitation</h2>
+            <div class="card_container">
+
+                <!-- garvitational force Card -->
+                <div class="card" id="garvitational">
+                    <h1 class="card_heading">force</h3>
+                    <p class="card__text">F = (G * m1 * m2) / d² </p>
+                    <input type="number" placeholder="mass1 (m1)" class="input" id="m1_gravitation">
+                    <input type="number" placeholder="m1 exponential value" class="input" id="m1_exp_gravitation">
+                    <input type="number" placeholder="mass2 (m2)" class="input" id="m2_gravitation">
+                    <input type="number" placeholder="m2 exponential value" class="input" id="m2_exp_gravitation">
+                    <input type="number" placeholder="distance (d)" class="input" id="d_gravitation">
+                    <input type="number" placeholder="d exponential value" class="input" id="d_exp_gravitation">
+                    <button class="calculate" onclick="calc_force_gravitation()">Calculate</button>
+                    <div class="finding_quantity" id="finding_force_gravitation">Force between two bodies  is:</div>
+                </div>
+
+                <!-- garvitational Mass1 and Mass2 Card -->
+                <div class="card" id="garvitational">
+                    <h1 class="card_heading">Mass 01, 02</h3>
+                    <p class="card__text">F = (G * m1 * m2) / d² </p>
+                    <input type="number" placeholder="mass1 (m1), mass2(2)" class="input" id="m2_m1_gravitation">
+                    <input type="number" placeholder="m2 exponential value" class="input" id="m2_exp_m1_gravitation">
+                    <input type="number" placeholder="distance (d)" class="input" id="d_m1_gravitation">
+                    <input type="number" placeholder="d exponential value" class="input" id="d_exp_m1_gravitation">
+                    <input type="number" placeholder="Force (F)" class="input" id="f_m1_gravitation">
+                    <input type="number" placeholder="F exponential value" class="input" id="f_exp_m1_gravitation">
+                    <button class="calculate" onclick="calc_m1_gravitation()">Calculate</button>
+                    <div class="finding_quantity" id="finding_m1_gravitation">Mass of body 1 or 2 is:</div>
+                </div>
+
+                <!-- gravitational distance between bodies -->
+                <div class="card" id="garvitational">
+                    <h1 class="card_heading">Distace</h3>
+                    <p class="card__text">F = (G * m1 * m2) / d² </p>
+                    <input type="number" placeholder="mass1 (m1)" class="input" id="m1_d_gravitation">
+                    <input type="number" placeholder="m1 exponential value" class="input" id="m1_exp_d_gravitation">
+                    <input type="number" placeholder="mass2 (m2)" class="input" id="m2_d_gravitation">
+                    <input type="number" placeholder="m2 exponential value" class="input" id="m2_exp_d_gravitation">
+                    <input type="number" placeholder="force (f)" class="input" id="f_d_gravitation">
+                    <input type="number" placeholder="f exponential value" class="input" id="f_exp_d_gravitation">
+                    <button class="calculate" onclick="calc_d_gravitation()">Calculate</button>
+                    <div class="finding_quantity" id="finding_d_gravitation">Distance between two bodies  is:</div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 10th Class Physics Section -->
+    <div class="Matric_physics" id="class10th">
+        <h1 class="class" id="class10th_physics">Physics of Class 10th</h1>
+
+        <div class="chapter" id="chap_Electricity">
+            <h2 class="chap_name">Electricity</h2>
+            <div class="card_container">
+
+                <!-- voltage Card -->
+                <div class="card">
+                    <h1 class="card_heading">vlotage</h1>
+                    <p class="card_text"> V = IR </p>
+                    <input type="number" placeholder="Current (I)" class="input" id="I_voltage">
+                    <input type="number" placeholder="Resistance (R)" class="input" id="R_voltage">
+                    <button class="calculate" onclick="calcvoltage()">Calculate</button>
+                    <div class="finding_quantity" id="finding_voltage">Voltage is:</div>
+                </div>
+
+                <!-- Current Card -->
+                <div class="card">
+                    <h1 class="card_heading">Current</h1>
+                    <p class="card_text"> I = V/R </p>
+                    <input type="number" placeholder="Voltage (V)" class="input" id="V_current">
+                    <input type="number" placeholder="Resistance (R)" class="input" id="R_current">
+                    <button class="calculate" onclick="calccurrent()">Calculate</button>
+                    <div class="finding_quantity" id="finding_current">Current is:</div>
+                </div>
+
+                <!-- Resistance Card -->
+                <div class="card">
+                    <h1 class="card_heading">Resistance</h1>
+                    <p class="card_text"> R = V/I </p>
+                    <input type="number" placeholder="Voltage (V)" class="input" id="V_resistance">
+                    <input type="number" placeholder="Current (I)" class="input" id="I_resistance">
+                    <button class="calculate" onclick="calcresistance()">Calculate</button>
+                    <div class="finding_quantity" id="finding_resistance">Resistance is:</div>
+                </div>
+
+                <!-- Electrical Power Card -->
+                <div class="card">
+                    <h1 class="card_heading">E_Power</h1>
+                    <p class="card_text"> P = IV = I²R = V²/R</p>
+                    <input type="number" placeholder="Voltage (V)" class="input" id="V_Epower">
+                    <input type="number" placeholder="Current (I)" class="input" id="I_Epower">
+                    <input type="number" placeholder="Resistance (R)" class="input" id="R_Epower">
+                    <button class="calculate" onclick="calcEpower()">Calculate</button>
+                    <div class="finding_quantity" id="finding_E_power">Electrical power is:</div>
+                </div>
+
+                <!-- Electrical Energy Card -->
+                <div class="card" id="Electrical_Energy">
+                    <h1 class="card_heading">E_Energy</h1>
+                    <p class="card_text"> E = IVt = I²Rt = V²t/R</p>
+                    <input type="number" placeholder="Voltage (V)" class="input" id="V_Eenergy">
+                    <input type="number" placeholder="Current (I)" class="input" id="I_Eenergy">
+                    <input type="number" placeholder="Resistance (R)" class="input" id="R_Eenergy">
+                    <input type="number" placeholder="Time (t)" class="input" id="t_Eenergy">
+                    <button class="calculate" onclick="calcEenergy()">Calculate</button>
+                    <div class="finding_quantity" id="finding_E_energy">Electrical energy is:</div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <!-- 11th Class Physics Section -->
+    <div class="Fiest_year_physics" id="class11th">
+        <h1 class="class" id="class11th_physics">Physics of Class 11th</h1>
+
+        <div class="chapter" id="chap_Two_dimensional_Motion">
+            <h2 class="chap_name">Two Dimensional Motion</h2>
+            <div class="card_container">
+
+                <!-- Vertical and Horizontal component card-->
+                <div class="card" id="rectangular_components">
+                    <h1 class="card_heading">x and y components</h1>
+                    <p class="card_text"> Vx = Vcos(theta)</p>
+                    <p class="card_text"> Vy = Vsin(theta)</p>
+                    <input type="number" placeholder="Velocity (V)" class="input" id="V_components">
+                    <input type="number" placeholder="Theta (theta)" class="input" id="theta_components">
+                    <button class="calculate" onclick="calc_xcompo()">Calculate x component</button>
+                    <div class="finding_quantity" id="finding_xcompo">Horizontal Component is:</div><br>
+                    <button class="calculate" onclick="calc_ycompo()">Calculate y component</button>
+                    <div class="finding_quantity" id="finding_ycompo">vertical Component is:</div>
+                </div>
+
+                <!-- Resultant Velocity -->
+                <div class="card" id="resultant_velocity">
+                    <h1 class="card_heading">Resultant Velocity</h1>
+                    <p class="card_text"> V = sqrt(Vx² + Vy²)</p>
+                    <input type="number" placeholder="Hori_Velocity (Vx)" class="input" id="Vx_Resultant">
+                    <input type="number" placeholder="Vert_Velocity (Vy)" class="input" id="Vy_Resultant">
+                    <button class="calculate" onclick="calc_resultant_velocity()">Calculate x component</button>
+                    <div class="finding_quantity" id="finding_resultant_velocity">Resultant vertical is:</div>
+                </div>
+
+                <!-- Range of Projectile -->
+                <div class="card" id="Horizontal_Range">
+                    <h1 class="card_heading">Horizontal Range</h1>
+                    <p class="card_text"> R = V² x sin2(theta) / g</p>
+                    <input type="number" placeholder="Velocity (V)" class="input" id="V_range">
+                    <input type="number" placeholder="Theta (theta)" class="input" id="theta_range">
+                    <button class="calculate" onclick="calc_Horizontal_range()">Calculate Range </button>
+                    <div class="finding_quantity" id="finding_horizontal_range">The range of projectile:</div>
+                </div>
+
+                <!-- Hight of the projectile -->
+                <div class="card" id="Maximum_Height">
+                    <h1 class="card_heading">Maximum Height</h1>
+                    <p class="card_text"> R = V² x sin(theta)² / 2g</p>
+                    <input type="number" placeholder="Velocity (V)" class="input" id="V_height">
+                    <input type="number" placeholder="Theta (theta)" class="input" id="theta_height">
+                    <button class="calculate" onclick="calc_Maximum_height()">Calculate Maximum Height</button>
+                    <div class="finding_quantity" id="finding_maximum_height">The maximum height of projectile:</div>
+                </div>
+
+                <!-- Time of Flight -->
+                <div class="card" id="Time_of_Flight">
+                    <h1 class="card_heading">Time of flight</h1>
+                    <p class="card_text"> T = 2V x sin(theta) / g</p>
+                    <input type="number" placeholder="Velocity (V)" class="input" id="V_flight">
+                    <input type="number" placeholder="Theta (theta)" class="input" id="theta_flight">
+                    <button class="calculate" onclick="calc_Total_time()">Calculate Time of flight</button>
+                    <div class="finding_quantity" id="finding_total_time">The Total Time of Flight is:</div>
+                </div>
+
+                <!-- Position of Projectile on X at Time t -->
+                <div class="card" id="Position_X">
+                    <h1 class="card_heading">Position on X_axis</h1>
+                    <p class="card_text"> X = V x cos(theta) x t</p>
+                    <input type="number" placeholder="Velocity (V)" class="input" id="V_Xposition">
+                    <input type="number" placeholder="Theta (theta)" class="input" id="theta_cos">
+                    <input type="number" placeholder="Time (t)" class="input" id="time_horizontal">
+                    <button class="calculate" onclick="calc_positionX()">Calculate Position on X</button>
+                    <div class="finding_quantity" id="finding_Xposition">The Position on X_axis is:</div>
+                </div>
+
+                <!-- Position of Projectile on Y at Time t -->
+                <div class="card" id="Position_Y">
+                    <h1 class="card_heading">Position on Y_axis</h1>
+                    <p class="card_text"> Y = (V x sin(theta) x t) - (0.5 x g x t²)</p>
+                    <input type="number" placeholder="Velocity (V)" class="input" id="V_Yposition">
+                    <input type="number" placeholder="Theta (theta)" class="input" id="theta_sin">
+                    <input type="number" placeholder="Time (t)" class="input" id="time_verticle">
+                    <button class="calculate" onclick="calc_positionY()">Calculate Position on X</button>
+                    <div class="finding_quantity" id="finding_Yposition">The Position on Y_axis is:</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chapter" id="chap_Sound_Oscillation_Waves">
+            <h2 class="chap_name">Sound, Oscillation, and Waves</h2>
+            <div class="card_container">
+    
+                <!-- Wave Speed -->
+                <div class="card" id="wave_speed">
+                    <h1 class="card_heading">Wave Speed</h1>
+                    <p class="card_text"> v = f * λ</p>
+                    <input type="number" placeholder="Frequency (f)" class="input" id="wave_frequency">
+                    <input type="number" placeholder="Wavelength (λ)" class="input" id="wave_wavelength">
+                    <button class="calculate" onclick="calc_wave_speed()">Calculate Wave Speed</button>
+                    <div class="finding_quantity" id="finding_wave_speed">Wave Speed is:</div>
+                </div>
+    
+                <!-- Frequency from Period -->
+                <div class="card" id="frequency_from_period">
+                    <h1 class="card_heading">Frequency from Time Period</h1>
+                    <p class="card_text"> f = 1 / T</p>
+                    <input type="number" placeholder="Time Period (T)" class="input" id="time_period">
+                    <button class="calculate" onclick="calc_frequency_from_period()">Calculate Frequency</button>
+                    <div class="finding_quantity" id="finding_frequency">Frequency is:</div>
+                </div>
+    
+                <!-- Kinetic Energy in SHM -->
+                <div class="card" id="kinetic_energy_shm">
+                    <h1 class="card_heading">Kinetic Energy in SHM</h1>
+                    <p class="card_text"> KE = 1/2 * m * ω² * (A² - x²)</p>
+                    <input type="number" placeholder="Mass (m)" class="input" id="m_shm">
+                    <input type="number" placeholder="Angular Frequency (ω)" class="input" id="w_shm">
+                    <input type="number" placeholder="Amplitude (A)" class="input" id="A_shm">
+                    <input type="number" placeholder="Displacement (x)" class="input" id="X_shm">
+                    <button class="calculate" onclick="calc_kEshm()">Calculate Kinetic Energy</button>
+                    <div class="finding_quantity" id="finding_kinetic_energy_shm">Kinetic Energy is:</div>
+                </div>
+    
+                <!-- Potential Energy in SHM -->
+                <div class="card" id="potential_energy_shm">
+                    <h1 class="card_heading">Potential Energy in SHM</h1>
+                    <p class="card_text"> PE = 1/2 * m * ω² * x²</p>
+                    <input type="number" placeholder="Mass (m)" class="input" id="mp_shm">
+                    <input type="number" placeholder="Angular Frequency (ω)" class="input" id="wp_shm">
+                    <input type="number" placeholder="Displacement (x)" class="input" id="Xp_shm">
+                    <button class="calculate" onclick="calc_PEshm()">Calculate Potential Energy</button>
+                    <div class="finding_quantity" id="finding_potential_energy_shm">Potential Energy is:</div>
+                </div>
+    
+                <!-- Wave Power -->
+                <div class="card" id="wave_power">
+                    <h1 class="card_heading">Wave Power</h1>
+                    <p class="card_text"> P = 1/2 * μ * ω² * A² * v</p>
+                    <input type="number" placeholder="Mass Density (μ)" class="input" id="md_wp">
+                    <input type="number" placeholder="Angular Frequency (ω)" class="input" id="w_wp">
+                    <input type="number" placeholder="Amplitude (A)" class="input" id="A_wp">
+                    <input type="number" placeholder="Wave Speed (v)" class="input" id="V_wp">
+                    <button class="calculate" onclick="calc_wp()">Calculate Wave Power</button>
+                    <div class="finding_quantity" id="finding_wave_power">Wave Power is:</div>
+                </div>
+    
+                <!-- Doppler Effect (Towards the Source) -->
+                <div class="card" id="de_tsource">
+                    <h1 class="card_heading">DE (Towards the Source)</h1>
+                    <p class="card_text"> f' = f (v + vo) / v</p>
+                    <input type="number" placeholder="Source Frequency (f)" class="input" id="sf_tsource">
+                    <input type="number" placeholder="Wave Speed (v)" class="input" id="V_tsource">
+                    <input type="number" placeholder="Observer Speed (vo)" class="input" id="Vo_tsource">
+                    <button class="calculate" onclick="calc_de_Tsource()">Calculate Doppler Effect</button>
+                    <div class="finding_quantity" id="finding_de_tsource">Doppler Effect (Towards the Source):</div>
+                </div>
+    
+                <!-- Doppler Effect (Away from the Source) -->
+                <div class="card" id="de_asource">
+                    <h1 class="card_heading">DE (Away from the Source)</h1>
+                    <p class="card_text"> f' = f (v - vo) / v</p>
+                    <input type="number" placeholder="Source Frequency (f)" class="input" id="sf_asource">
+                    <input type="number" placeholder="Wave Speed (v)" class="input" id="V_asource">
+                    <input type="number" placeholder="Observer Speed (vo)" class="input" id="Vo_asource">
+                    <button class="calculate" onclick="calc_de_Asource()">Calculate Doppler Effect</button>
+                    <div class="finding_quantity" id="finding_de_asource">Doppler Effect (Away from the Source):</div>
+                </div>
+
+                <!-- Doppler Effect (Towards the observer) -->
+                <div class="card" id="de_tobserver">
+                    <h1 class="card_heading">DE (Towards the observer)</h1>
+                    <p class="card_text"> f' = f v / (v - vo)</p>
+                    <input type="number" placeholder="Source Frequency (f)" class="input" id="sf_tobserver">
+                    <input type="number" placeholder="Wave Speed (v)" class="input" id="V_tobserver">
+                    <input type="number" placeholder="Source Speed (vs)" class="input" id="Vs_tobserver">
+                    <button class="calculate" onclick="calc_de_Tobserver()">Calculate Doppler Effect</button>
+                    <div class="finding_quantity" id="finding_de_tobserver">Doppler Effect (Towards the Observer):</div>
+                </div>
+    
+                <!-- Doppler Effect (Away from the observer) -->
+                <div class="card" id="de_tobserver">
+                    <h1 class="card_heading">DE (Away from observer)</h1>
+                    <p class="card_text"> f' = f v / (v + vo)</p>
+                    <input type="number" placeholder="Source Frequency (f)" class="input" id="sf_aobserver">
+                    <input type="number" placeholder="Wave Speed (v)" class="input" id="V_aobserver">
+                    <input type="number" placeholder="Source Speed (vs)" class="input" id="Vs_aobserver">
+                    <button class="calculate" onclick="calc_de_Aobserver()">Calculate Doppler Effect</button>
+                    <div class="finding_quantity" id="finding_de_aobserver">Doppler Effect (Away from the Observer):</div>
+                </div>
+    
+                <!-- Beat Frequency -->
+                <div class="card" id="beat_frequency">
+                    <h1 class="card_heading">Beat Frequency</h1>
+                    <p class="card_text"> f_beat = |f1 - f2|</p>
+                    <input type="number" placeholder="Frequency 1 (f1)" class="input" id="f1_beat">
+                    <input type="number" placeholder="Frequency 2 (f2)" class="input" id="f2_beat">
+                    <button class="calculate" onclick="calc_beat_frequency()">Calculate Beat Frequency</button>
+                    <div class="finding_quantity" id="finding_beat_frequency">Beat Frequency is:</div>
+                </div>
+    
+                <!-- Standing Wave Wavelength -->
+                <div class="card" id="standing_wave_wavelength">
+                    <h1 class="card_heading">Standing Wave Wavelength</h1>
+                    <p class="card_text"> λ_n = 2L / n</p>
+                    <input type="number" placeholder="Length (L)" class="input" id="l_sw">
+                    <input type="number" placeholder="Harmonic (n)" class="input" id="n_sw">
+                    <button class="calculate" onclick="calc_standing_wave_wavelength()">Calculate Standing Wave Wavelength</button>
+                    <div class="finding_quantity" id="finding_standing_wave_wavelength">Standing Wave Wavelength is:</div>
+                </div>
+    
+                <!-- Resonance Frequency -->
+                <div class="card" id="resonance_frequency">
+                    <h1 class="card_heading">Resonance Frequency</h1>
+                    <p class="card_text"> f = 1 / 2π √(k / m)</p>
+                    <input type="number" placeholder="Spring Constant (k)" class="input" id="kf">
+                    <input type="number" placeholder="Mass (m)" class="input" id="mf">
+                    <button class="calculate" onclick="calc_resonance_frequency()">Calculate Resonance Frequency</button>
+                    <div class="finding_quantity" id="finding_resonance_frequency">Resonance Frequency is:</div>
+                </div>
+
+                        <!-- Sound Intensity -->
+                <div class="card" id="sound_intensity">
+                    <h1 class="card_heading">Sound Intensity</h1>
+                    <p class="card_text">I = P / A</p>
+                    <input type="number" placeholder="Power (P)" class="input" id="ps">
+                    <input type="number" placeholder="Area (A)" class="input" id="as">
+                    <button class="calculate" onclick="calc_sound_intensity()">Calculate Sound Intensity</button>
+                    <div class="finding_quantity" id="finding_sound_intensity">Sound Intensity is:</div>
+                </div>
+
+                <!-- Sound Level -->
+                <div class="card" id="sound_level">
+                    <h1 class="card_heading">Sound Level</h1>
+                    <p class="card_text">L = 10 * log(I / Io)</p>
+                    <input type="number" placeholder="Intensity (I)" class="input" id="Is">
+                    <input type="number" placeholder="Reference Intensity (I0)" class="input" id="Io">
+                    <button class="calculate" onclick="calc_sound_level()">Calculate Sound Level</button>
+                    <div class="finding_quantity" id="finding_sound_level">Sound Level is:</div>
+                </div>
+        
+            </div>
+        </div>
+    
+    </div>
+
+
+    <!-- 12th Class Physics Section -->
+    <div class="Intermediate_physics" id="class12th">
+        <h1 class="class" id="class12th_physics">Physics of Class 12th</h1>
+
+        <div class="chapter" id="chap_Electostatics">
+            <h2 class="chap_name">Electrostatics</h2>
+            <div class="card_container">
+
+            <!-- Electric Field -->
+            <div class="card" id="electric_field">
+                <h1 class="card_heading">Electric Field</h1>
+                <p class="card_text">E = F / q or E = k * q / r²</p>
+                <input type="number" placeholder="Force F (N)" class="input" id="force_electric">
+                <input type="number" placeholder="Charge q (C)" class="input" id="charge_electric">
+                <input type="number" placeholder="Distance r (m)" class="input" id="distance_field">
+                <button class="calculate" onclick="calc_electric_field()">Calculate Electric Field</button>
+                <div class="finding_quantity" id="finding_electric_field">Electric Field (E) is:</div>
+            </div>
+
+            <!-- Electric Potential -->
+            <div class="card" id="electric_potential">
+                <h1 class="card_heading">Electric Potential</h1>
+                <p class="card_text">V = k * q / r</p>
+                <input type="number" placeholder="Charge q (C)" class="input" id="charge_potential">
+                <input type="number" placeholder="Distance r (m)" class="input" id="distance_potential">
+                <button class="calculate" onclick="calc_electric_potential()">Calculate Electric Potential</button>
+                <div class="finding_quantity" id="finding_electric_potential">Electric Potential (V) is:</div>
+            </div>
+
+            <!-- Capacitance -->
+            <div class="card" id="capacitance">
+                <h1 class="card_heading">Capacitance</h1>
+                <p class="card_text">C = Q / V</p>
+                <input type="number" placeholder="Charge Q (C)" class="input" id="charge_capacitance">
+                <input type="number" placeholder="Voltage V (V)" class="input" id="voltage_capacitance">
+                <!-- <input type="number" placeholder="Area A (m²)" class="input" id="area_capacitance">
+                <input type="number" placeholder="Distance d (m)" class="input" id="distance_capacitance"> -->
+                <button class="calculate" onclick="calc_capacitance()">Calculate Capacitance</button>
+                <div class="finding_quantity" id="finding_capacitance">Capacitance (C) is:</div>
+            </div>
+
+            <!-- Energy in Capacitor -->
+            <div class="card" id="energy_in_capacitor">
+                <h1 class="card_heading">Energy in Capacitor</h1>
+                <p class="card_text">U = 1/2 * C * V²</p>
+                <input type="number" placeholder="Capacitance C (F)" class="input" id="capacitance_energy">
+                <input type="number" placeholder="Voltage V (V)" class="input" id="voltage_energy">
+                <button class="calculate" onclick="calc_energy_capacitor()">Calculate Energy</button>
+                <div class="finding_quantity" id="finding_energy_capacitor">Energy (U) is:</div>
+            </div>
+        
+        </div>
+
+    </div>
+
+
+    <div class="chapter" id="chap_ModernPhysics">
+        <h2 class="chap_name">Modern Physics</h2>
+        <div class="card_container">
+
+            <!-- Energy of Photon -->
+            <div class="card" id="energy_photon">
+                <h1 class="card_heading">Energy of Photon</h1>
+                <p class="card_text">E = h * f</p>
+                <input type="number" placeholder="Frequency f (Hz)" class="input" id="frequency_photon">
+                <!-- <input type="number" placeholder="Wavelength λ (m)" class="input" id="wavelength_photon"> -->
+                <button class="calculate" onclick="calc_energy_photon()">Calculate Energy</button>
+                <div class="finding_quantity" id="finding_energy_photon">Energy (E) is:</div>
+            </div>
+
+            <!-- de Broglie Wavelength -->
+            <div class="card" id="de_broglie_wavelength">
+                <h1 class="card_heading">de Broglie Wavelength</h1>
+                <p class="card_text">λ = h / mv</p>
+                <input type="number" placeholder="Mass m (kg)" class="input" id="mass_broglie">
+                <input type="number" placeholder="Velocity v (m/s)" class="input" id="velocity_broglie">
+                <button class="calculate" onclick="calc_de_broglie_wavelength()">Calculate Wavelength</button>
+                <div class="finding_quantity" id="finding_de_broglie_wavelength">Wavelength (λ) is:</div>
+            </div>
+
+            <!-- Time Dilation -->
+            <div class="card" id="time_dilation">
+                <h1 class="card_heading">Time Dilation</h1>
+                <p class="card_text">Δt = Δt₀ / √(1 - v²/c²)</p>
+                <input type="number" placeholder="Proper Time t₀ (s)" class="input" id="proper_time_dilation">
+                <input type="number" placeholder="Velocity v (m/s)" class="input" id="velocity_dilation">
+                <button class="calculate" onclick="calc_time_dilation()">Calculate Time Dilation</button>
+                <div class="finding_quantity" id="finding_time_dilation">Dilated Time (Δt) is:</div>
+            </div>
+
+                <!-- Length Contraction -->
+            <div class="card" id="length_contraction">
+                <h1 class="card_heading">Length Contraction</h1>
+                <p class="card_text">L = L₀ √(1 - v²/c²)</p>
+                <input type="number" placeholder="Proper Length L₀ (m)" class="input" id="proper_length">
+                <input type="number" placeholder="Velocity v (m/s)" class="input" id="velocity_length">
+                <button class="calculate" onclick="calc_length_contraction()">Calculate Length</button>
+                <div class="finding_quantity" id="finding_length_contraction">Contracted Length (L) is:</div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+        
+
+    <script src="demo_invoke.js"></script>
+
+</body>
+</html>

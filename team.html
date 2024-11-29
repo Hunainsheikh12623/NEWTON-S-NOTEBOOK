@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lexend Deca", sans-serif;
+            background: royalblue;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        } 
+
+        .mainContainer {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .member {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border: 1.5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .member:hover {
+            transform: scale(1.05);
+        }
+
+        .member-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .socialMedia {
+            height: 30px;
+            width: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .socialMedia:hover {
+            transform: scale(1.2);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .member-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .socialMedia {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="background.jpeg" alt="background" class="background">
+
+    <div class="mainContainer">
+        <h1>Meet Our Team</h1>
+        <section class="container">
+
+            <article class="member">
+                <img src="member1.jpg" alt="Hunain Sheikh" class="member-img">
+                <h2>Hunain Sheikh</h2>
+                <p class="does">Project Developer</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, culpa.</p>
+                <div class="contact">
+                    <a href="#"><img src="facebook.svg" alt="Facebook" class="socialMedia" onclick="facebook1()"></a>
+                    <a href="#"><img src="instagram.svg" alt="Instagram" class="socialMedia" onclick="instagram1()"></a>
+                    <a href="#"><img src="linkedin.svg" alt="LinkedIn" class="socialMedia" onclick="linkedin1()"></a>
+                </div>
+            </article>
+
+            <article class="member">
+                <img src="umad.jpg" alt="Umad Kambo" class="member-img">
+                <h2>Umad Kambo</h2>
+                <p class="does">Lead Designer</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore.</p>
+                <div class="contact">
+                    <a href="#"><img src="facebook.svg" alt="Facebook" class="socialMedia"></a>
+                    <a href="#"><img src="instagram.svg" alt="Instagram" class="socialMedia"></a>
+                    <a href="#"><img src="linkedin.svg" alt="LinkedIn" class="socialMedia"></a>
+                </div>
+            </article>
+            <article class="member">
+                <img src="salar.jpg" alt="Salar" class="member-img">
+                <h2>Salar</h2>
+                <p class="does">Frontend Developer</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, accusamus.</p>
+                <div class="contact">
+                    <a href="#"><img src="facebook.svg" alt="Facebook" class="socialMedia"></a>
+                    <a href="#"><img src="instagram.svg" alt="Instagram" class="socialMedia"></a>
+                    <a href="#"><img src="linkedin.svg" alt="LinkedIn" class="socialMedia"></a>
+                </div>
+            </article>
+            <article class="member">
+                <img src="ronuqe.jpg" alt="Ronuqe" class="member-img">
+                <h2>Ronuqe</h2>
+                <p class="does">Backend Specialist</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, corrupti!</p>
+                <div class="contact">
+                    <a href="#"><img src="facebook.svg" alt="Facebook" class="socialMedia"></a>
+                    <a href="#"><img src="instagram.svg" alt="Instagram" class="socialMedia"></a>
+                    <a href="#"><img src="linkedin.svg" alt="LinkedIn" class="socialMedia"></a>
+                </div>
+            </article>
+        </section>
+    </div>
+
+
+    <script>
+        function facebook1() {
+            window.open("https://www.facebook.com/itzhunain.shaikh");
+        }
+        function instagram1() {
+            window.open("https://www.instagram.com/hunain.shaikh23");
+        }
+        function linkedin1() {
+            window.open("https://www.linkedin.com/in/hunain-shaikh-62365a266?");
+        }
+    </script>
+</body>
+</html>

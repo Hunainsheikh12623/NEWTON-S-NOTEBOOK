@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's NoteBook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    
+
+    <style>
+/*   <!-- color pallet code used in style tag -->
+     <!-- #DCF2F1 -->
+     <!-- #7FC7D9 -->
+     <!-- #365486 -->
+     <!-- #0F1035 -->  
+
+      font used by google: font-family: "Lexend Deca", sans-seri     
+*/
+
+        body {
+            background-color: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Lexend Deca", sans-serif;
+        }
+        h1{
+            color: white;
+            font-size: 4rem;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 4px;
+            animation:  moveleft 30s linear infinite;
+        }
+        @keyframes moveleft {
+            0% {
+        transform: translateX(100%);
+        }
+            100% {
+        transform: translateX(-100%);
+        }
+    } 
+
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        } 
+        
+        .buttonContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            font-family: "Lexend Deca", sans-serif;
+        }
+        button {
+            height: 50px;
+            width: 150px;
+            font-family: "Lexend Deca", sans-seri;
+            background-color: rgba(255, 255, 255);
+            color: #0F1035;
+            border: none;
+            font-weight: bolder;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            transition: 0.3s ease;
+
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: white;
+            border: white solid 1px;
+            text-shadow: #0F1035 2px 2px 2px;
+        }
+
+        @media (max-width: 768px) {
+            h1{
+                font-size: 3.5rem;
+                animation: moveleft 15s linear infinite;
+            }
+            @keyframes moveleft {
+               0% { transform: translateX(100%); }
+               100% { transform: translateX(-100%); }
+            }
+            .buttonContainer {
+                flex-direction: column; 
+            }
+
+            button {
+                width: 70%;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1{
+                font-size: 40px;
+                animation: moveleft 15s linear infinite;
+            }
+            @keyframes moveleft {
+               0% { transform: translateX(100%); }
+               100% { transform: translateX(-100%); }
+            }
+            button {
+                width: 90%;
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <img src="background.jpeg" alt="background" class="background">
+    <h1>Welcome To Newton's NoteBook</h1>
+    <div class="buttonContainer">
+        <button  onclick="book()">Book</button>
+        <button onclick="aboutus()">About Us</button>
+        <button onclick="team()">Team</button>
+        <button>Project Info</button>
+    </div>
+
+    <script>
+        function book() {
+            window.location.href = "demo.html";
+        };
+        function aboutus() {
+            window.location.href = "aboutus.html";
+        }
+        function team() {
+            window.location.href = "team.html";
+        }
+    </script>
+</body>
+</html>
